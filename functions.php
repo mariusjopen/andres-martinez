@@ -3,6 +3,7 @@
 $theme = wp_get_theme();
 $ver = $theme->get('Version');
 
+add_theme_support( 'post-thumbnails' );
 remove_action( 'wp_head', 'wp_generator' );
 add_filter( 'show_admin_bar', '__return_false' );
 
@@ -13,6 +14,25 @@ function add_theme_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
+function create_post_type() {
+  register_post_type( 'work',
+    array(
+      'labels' => array(
+        'name' => __( 'Work' ),
+        'singular_name' => __( 'Work' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+			'supports' => array(
+					'title',
+					'editor',
+					'excerpt',
+					'thumbnail'
+			),
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
 
 
 

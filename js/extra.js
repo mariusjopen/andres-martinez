@@ -1,3 +1,3 @@
 jQuery(document).ready(function () {
-  console.log('EXTRA');
+  console.log('EXTRA TEST');
 });
