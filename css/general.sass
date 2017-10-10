@@ -5,6 +5,11 @@ body
   margin: 0px
   padding: 0px
 
+
+body
+    height: 100vh
+    overflow: hidden
+    
 img
   width: 100%
   height: auto
@@ -23,21 +28,27 @@ a
   color: black
   text-decoration: none
 
+.content
+  margin: 0px $distance 0px $distance
+
+.header
+  position: fixed
+
 .post
   margin-bottom: 60px
-
-.content
-  margin-top: 70px
-
-.wrapper
-  margin: $distance 40px $distance 40px
 
 .work
   width: 48%
   float: left
   margin-right: 2%
+  overflow: scroll
+  height: 100vh
+  padding-top: 60px
 
 .news
   width: 48%
   float: left
   margin-left: 2%
+  overflow: scroll
+  height: 100vh
+  padding-top: 60px
