@@ -12,3 +12,9 @@
 	</head>
 
 	<body <?php body_class(); ?> >
+
+		<div class="wrapper">
+
+			<div class="header">
+				<div class="blog-title"><h2><?php bloginfo( 'name' ); ?></h2></div>
+			</div>
